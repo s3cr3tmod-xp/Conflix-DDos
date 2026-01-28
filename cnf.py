@@ -66,10 +66,10 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
 attemps = 0
 os.system("clear")
 print(logo)
-print(f"\033[38;5;220m╔{'═' * 70}╗")
-print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 23} SCRIPT ADMIN BLACK ARMY {' ' * 23}\033[0m\033[37m║")
-print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 24}  Designt By: KunFay'99{' ' * 24}\033[0m\033[37m║")
-print(f"\033[38;5;220m╚{'═' * 70}╝")
+print(f"\033[38;5;220m╔{'═' * 74}╗")
+print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 25} SCRIPT ADMIN BLACK ARMY {' ' * 25}\033[0m\033[37m║")
+print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 26}  Designt By: KunFay'99{' ' * 28}\033[0m\033[37m║")
+print(f"\033[38;5;220m╚{'═' * 74}╝")
 while attemps < 100:
     print("\033[33m┏━━━━━━━━━⬣")
     username = input("\033[33m┗━> Username: \033[30m")
