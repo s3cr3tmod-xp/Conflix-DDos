@@ -21,6 +21,7 @@ def log_message(message: str):
         log_file.write(f"[{timestamp}] {message}\n")
     print(message)
 # ASCII art
+attemps = 0
 os.system("clear")
 logo = """
 \033[38;5;220m
@@ -34,6 +35,18 @@ logo = """
 ▒▒▒▒╚════╝▒╚════╝▒╚╝▒▒╚═══╝╚╝▒▒▒▒▒╚═════╝╚╝╚═╝▒▒▒▒╚═╝▒▒▒▒▒╚═╝▒▒▒▒╚═╝▒▒▒
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\033[0m
 """
+while attemps < 100:
+    print("\033[33m┏━━━━━━━━━⬣")
+    username = input("\033[33m┗━> Username: \033[30m")
+    password = input("\033[33m┗━> Password: \033[30m")
+
+    if username == 'softex' and password == 'softex':
+        print("\033[100m\033[30m⟩⟩ BIRRUH BIDDAM NAFDIKA YAA AQSHA...!! \033[0m")
+        break
+    else:
+        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        attemps += 1
+        continue
 # Validate target IP
 def validate_ip(ip: str):
     try:
@@ -67,7 +80,7 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
 def main():
     os.system("clear")
     print(logo)
-    print("\033[33m┏━━━⬣")
+    print("\033[33m┏━━━━━━━━━⬣")
     ip = input("\033[33m┗━> IP: \033[32m").strip()
     if not validate_ip(ip):
         log_message("\033[31m==⟩ Invalid IP address. Exiting...")
