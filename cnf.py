@@ -91,7 +91,7 @@ def main():
         sys.exit(1)
 
     try:
-        port = int(input("\033[33m┗━> IP [default 80]: \033[32m").strip() or 80)
+        port = int(input("\033[33m┗━> Port [default 80]: \033[32m").strip() or 80)
         packet_size = int(input("\033[33m┗━> Size [default 1490 bytes]: \033[32m").strip() or 1490)
         threads = int(input("\033[33m┗━> Number Of threads [default 4]: \033[32m").strip() or 4)
         rate_limit = float(input("\033[33m┗━> Duration [seconds]: \033[32m").strip() or 0.01)
