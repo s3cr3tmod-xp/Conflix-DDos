@@ -35,18 +35,6 @@ logo = """
 ▒▒▒▒╚════╝▒╚════╝▒╚╝▒▒╚═══╝╚╝▒▒▒▒▒╚═════╝╚╝╚═╝▒▒▒▒╚═╝▒▒▒▒▒╚═╝▒▒▒▒╚═╝▒▒▒
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\033[0m
 """
-while attemps < 100:
-    print("\033[33m┏━━━━━━━━━⬣")
-    username = input("\033[33m┗━> Username: \033[30m")
-    password = input("\033[33m┗━> Password: \033[30m")
-
-    if username == 'softex' and password == 'softex':
-        print("\033[100m\033[30m⟩⟩ BIRRUH BIDDAM NAFDIKA YAA AQSHA...!! \033[0m")
-        break
-    else:
-        print('Incorrect credentials. Check if you have Caps lock on and try again.')
-        attemps += 1
-        continue
 # Validate target IP
 def validate_ip(ip: str):
     try:
@@ -76,6 +64,18 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
     finally: 
         sock.close()
 
+while attemps < 100:
+    print("\033[33m┏━━━━━━━━━⬣")
+    username = input("\033[33m┗━> Username: \033[30m")
+    password = input("\033[33m┗━> Password: \033[30m")
+
+    if username == 'softex' and password == 'softex':
+        print("\033[100m\033[30m⟩⟩ BIRRUH BIDDAM NAFDIKA YAA AQSHA...!! \033[0m")
+        break
+    else:
+        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        attemps += 1
+        continue
 # Main script execution
 def main():
     os.system("clear")
