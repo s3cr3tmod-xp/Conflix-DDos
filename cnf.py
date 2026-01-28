@@ -34,10 +34,6 @@ logo = """
 ▒▒▒▒╚════╝▒╚════╝▒╚╝▒▒╚═══╝╚╝▒▒▒▒▒╚═════╝╚╝╚═╝▒▒▒▒╚═╝▒▒▒▒▒╚═╝▒▒▒▒╚═╝▒▒▒
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\033[0m
 """
-print(f"\033[38;5;220m╔{'═' * 59}╗")
-print(f"\033[38;5;220m║\033[0m \033[41m{' ' * 17} SCRIPT ADMIN BLACK ARMY {' ' * 15}\033[0m \033[37m║")
-print(f"\033[38;5;220m║\033[0m \033[41m  Designt By: KunFay'99{' ' * 34}\033[0m \033[37m║")
-print(f"\033[38;5;220m╚{'═' * 59}╝")
 # Validate target IP
 def validate_ip(ip: str):
     try:
@@ -71,6 +67,10 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
     attemps = 0
     os.system("clear")
     print(logo)
+    print(f"\033[38;5;220m╔{'═' * 59}╗")
+    print(f"\033[38;5;220m║\033[0m \033[41m{' ' * 17} SCRIPT ADMIN BLACK ARMY {' ' * 15}\033[0m \033[37m║")
+    print(f"\033[38;5;220m║\033[0m \033[41m  Designt By: KunFay'99{' ' * 34}\033[0m \033[37m║")
+    print(f"\033[38;5;220m╚{'═' * 59}╝")
 while attemps < 100:
     print("\033[33m┏━━━━━━━━━⬣")
     username = input("\033[33m┗━> Username: \033[30m")
