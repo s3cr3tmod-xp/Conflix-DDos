@@ -64,19 +64,19 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
         sock.close()
 
 # Main script execution
-    attemps = 0
-    os.system("clear")
-    print(logo)
-    print(f"\033[38;5;220m╔{'═' * 59}╗")
-    print(f"\033[38;5;220m║\033[0m \033[41m{' ' * 17} SCRIPT ADMIN BLACK ARMY {' ' * 15}\033[0m \033[37m║")
-    print(f"\033[38;5;220m║\033[0m \033[41m  Designt By: KunFay'99{' ' * 34}\033[0m \033[37m║")
-    print(f"\033[38;5;220m╚{'═' * 59}╝")
+attemps = 0
+os.system("clear")
+print(logo)
+print(f"\033[38;5;220m╔{'═' * 59}╗")
+print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 17} SCRIPT ADMIN BLACK ARMY {' ' * 15}\033[0m\033[37m║")
+print(f"\033[38;5;220m║\033[0m\033[41m  Designt By: KunFay'99{' ' * 34}\033[0m\033[37m║")
+print(f"\033[38;5;220m╚{'═' * 59}╝")
 while attemps < 100:
     print("\033[33m┏━━━━━━━━━⬣")
     username = input("\033[33m┗━> Username: \033[30m")
     password = input("\033[33m┗━> Password: \033[30m")
 
-    if username == 'softex' and password == 'softex':
+    if username == 'soft' and password == 'soft':
         print("\033[100m\033[30m⟩⟩ BIRRUH BIDDAM NAFDIKA YAA AQSHA...!! \033[0m")
         break
     else:
