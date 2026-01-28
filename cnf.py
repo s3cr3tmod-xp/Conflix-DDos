@@ -21,7 +21,6 @@ def log_message(message: str):
         log_file.write(f"[{timestamp}] {message}\n")
     print(message)
 # ASCII art
-attemps = 0
 os.system("clear")
 logo = """
 \033[38;5;220m
@@ -64,6 +63,10 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
     finally: 
         sock.close()
 
+# Main script execution
+    attemps = 0
+    os.system("clear")
+    print(logo)
 while attemps < 100:
     print("\033[33m┏━━━━━━━━━⬣")
     username = input("\033[33m┗━> Username: \033[30m")
@@ -76,10 +79,8 @@ while attemps < 100:
         print('Incorrect credentials. Check if you have Caps lock on and try again.')
         attemps += 1
         continue
-# Main script execution
+
 def main():
-    os.system("clear")
-    print(logo)
     print("\033[33m┏━━━━━━━━━⬣")
     ip = input("\033[33m┗━> IP: \033[32m").strip()
     if not validate_ip(ip):
