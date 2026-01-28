@@ -66,13 +66,13 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
 def main():
     os.system("clear")
     print(logo)
-    ip = input("\033[33m==⟩ IP: \033[32m").strip()
+    print("\033[33m┏━━━⬣")
+    ip = input("\033[33m┗━> IP: \033[32m").strip()
     if not validate_ip(ip):
         log_message("\033[31m==⟩ Invalid IP address. Exiting...")
         sys.exit(1)
 
     try:
-        print("\033[33m┏━━━⬣")
         port = int(input("\033[33m┗━> IP [default 80]: \033[32m").strip() or 80)
         packet_size = int(input("\033[33m┗━> Size [default 1490 bytes]: \033[32m").strip() or 1490)
         threads = int(input("\033[33m┗━> Number Of threads [default 4]: \033[32m").strip() or 4)
