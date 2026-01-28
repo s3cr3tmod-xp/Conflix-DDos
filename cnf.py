@@ -68,8 +68,8 @@ attemps = 0
 os.system("clear")
 print(logo)
 print(f"\033[38;5;220m╔{'═' * 70}╗")
-print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 35} SCRIPT ADMIN BLACK ARMY {' ' * 35}\033[0m\033[37m║")
-print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 35}  Designt By: KunFay'99{' ' * 35}\033[0m\033[37m║")
+print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 23} SCRIPT ADMIN BLACK ARMY {' ' * 23}\033[0m\033[37m║")
+print(f"\033[38;5;220m║\033[0m\033[41m{' ' * 24}  Designt By: KunFay'99{' ' * 24}\033[0m\033[37m║")
 print(f"\033[38;5;220m╚{'═' * 70}╝")
 while attemps < 100:
     print("\033[33m┏━━━━━━━━━⬣")
