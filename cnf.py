@@ -75,7 +75,7 @@ while attemps < 100:
     username = input("\033[33m┗━> Username: \033[30m")
     password = input("\033[33m┗━> Password: \033[30m")
 
-    if username == 'soft' and password == 'soft':
+    if username == 'fuck' and password == 'jaws':
         print("\033[48;5;7m\033[30m⟩⟩ BIRRUH BIDDAM NAFDIKA YAA AQSHA...!! \033[0m")
         break
     else:
